@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box m-2 p-3">
     <div class="order-item__details">
       <p>order id:{{order.id}}</p>
       <p>payment_info: {{order.payment_info}}</p>

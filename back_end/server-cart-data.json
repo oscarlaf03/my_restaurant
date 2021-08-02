@@ -5,7 +5,7 @@
         "image_tag": "23f95765b967ff",
         "name": "Toast / Bread",
         "price": 1,
-        "quantity": 1
+        "quantity": 12
     },
     {
         "id": 6,
@@ -14,5 +14,37 @@
         "name": "Pasta Bar",
         "price": 12.99,
         "quantity": 3
+    },
+    {
+        "id": 1,
+        "category_id": 1,
+        "image_tag": "293202f9d9f7f4",
+        "name": "Bagel",
+        "price": 2,
+        "quantity": 1
+    },
+    {
+        "id": 8,
+        "category_id": 2,
+        "image_tag": "72589c4c990f97",
+        "name": "Indian Entree",
+        "price": 11.95,
+        "quantity": 1
+    },
+    {
+        "id": 3,
+        "category_id": 1,
+        "image_tag": "95d02a230fe050",
+        "name": "Muffin",
+        "price": 1.25,
+        "quantity": 7
+    },
+    {
+        "id": 2,
+        "category_id": 1,
+        "image_tag": "808916fd5ddf96",
+        "name": "Croissant",
+        "price": 1,
+        "quantity": 7
     }
 ]
