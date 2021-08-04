@@ -1,11 +1,19 @@
 [
     {
-        "id": 10,
-        "category_id": 3,
-        "image_tag": "dba0fc03da30ca",
-        "name": "Medium Drink",
-        "price": 1.5,
-        "quantity": 9
+        "id": 3,
+        "category_id": 1,
+        "image_tag": "95d02a230fe050",
+        "name": "Muffin",
+        "price": 1.25,
+        "quantity": 2
+    },
+    {
+        "id": 2,
+        "category_id": 1,
+        "image_tag": "808916fd5ddf96",
+        "name": "Croissant",
+        "price": 1,
+        "quantity": 34
     },
     {
         "id": 1,
@@ -13,6 +21,70 @@
         "image_tag": "293202f9d9f7f4",
         "name": "Bagel",
         "price": 2,
-        "quantity": 2
+        "quantity": 9
+    },
+    {
+        "id": 10,
+        "category_id": 3,
+        "image_tag": "dba0fc03da30ca",
+        "name": "Medium Drink",
+        "price": 1.5,
+        "quantity": 16
+    },
+    {
+        "id": 9,
+        "category_id": 3,
+        "image_tag": "70c2a6247e7b58",
+        "name": "Small Drink",
+        "price": 0.75,
+        "quantity": 5
+    },
+    {
+        "id": 8,
+        "category_id": 2,
+        "image_tag": "72589c4c990f97",
+        "name": "Indian Entree",
+        "price": 11.95,
+        "quantity": 14
+    },
+    {
+        "id": 11,
+        "category_id": 3,
+        "image_tag": "ffc9bf61e441cd",
+        "name": "Large Drink",
+        "price": 2,
+        "quantity": 8
+    },
+    {
+        "id": 6,
+        "category_id": 2,
+        "image_tag": "bd237a0c0d19ef",
+        "name": "Pasta Bar",
+        "price": 12.99,
+        "quantity": 8
+    },
+    {
+        "id": 5,
+        "category_id": 1,
+        "image_tag": "5650be5d48a99b",
+        "name": "English Muffin",
+        "price": 2.5,
+        "quantity": 5
+    },
+    {
+        "id": 4,
+        "category_id": 1,
+        "image_tag": "23f95765b967ff",
+        "name": "Toast / Bread",
+        "price": 1,
+        "quantity": 5
+    },
+    {
+        "id": 7,
+        "category_id": 2,
+        "image_tag": "3e1bd1342800f7",
+        "name": "Mediterranean Entree",
+        "price": 10.99,
+        "quantity": 4
     }
 ]

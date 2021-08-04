@@ -859,5 +859,81 @@
         ],
         "total": "29.98",
         "payment_info": "44444"
+    },
+    {
+        "id": 20,
+        "items": [
+            {
+                "id": 10,
+                "category_id": 3,
+                "image_tag": "dba0fc03da30ca",
+                "name": "Medium Drink",
+                "price": 1.5,
+                "quantity": 9
+            },
+            {
+                "id": 1,
+                "category_id": 1,
+                "image_tag": "293202f9d9f7f4",
+                "name": "Bagel",
+                "price": 2,
+                "quantity": 2
+            },
+            {
+                "id": 3,
+                "category_id": 1,
+                "image_tag": "95d02a230fe050",
+                "name": "Muffin",
+                "price": 1.25,
+                "quantity": 3
+            }
+        ],
+        "total": "21.25",
+        "payment_info": "teste"
+    },
+    {
+        "id": 21,
+        "items": [
+            {
+                "id": 1,
+                "category_id": 1,
+                "image_tag": "293202f9d9f7f4",
+                "name": "Bagel",
+                "price": 2,
+                "quantity": 5
+            }
+        ],
+        "total": "10.00",
+        "payment_info": "fully paid"
+    },
+    {
+        "id": 22,
+        "items": [
+            {
+                "id": 3,
+                "category_id": 1,
+                "image_tag": "95d02a230fe050",
+                "name": "Muffin",
+                "price": 1.25,
+                "quantity": 6
+            }
+        ],
+        "total": "7.50",
+        "payment_info": "done"
+    },
+    {
+        "id": 23,
+        "items": [
+            {
+                "id": 1,
+                "category_id": 1,
+                "image_tag": "293202f9d9f7f4",
+                "name": "Bagel",
+                "price": 2,
+                "quantity": 5
+            }
+        ],
+        "total": "10.00",
+        "payment_info": "bagels orders"
     }
 ]

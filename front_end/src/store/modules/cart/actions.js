@@ -6,9 +6,10 @@ const actions = {
       commit('UPDATE_CART_ITEMS', response.data);
     });
   },
-  addCartItem({ commit }, cartItem) {
+  addCartItem({ commit, dispatch }, cartItem) {
     axios.post('/api/cart', cartItem).then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
+      dispatch('addNotification',{message: `${cartItem.name} successfully added to cart`}, {root: true})
     });
   },
   removeCartItem({ commit }, cartItem) {
