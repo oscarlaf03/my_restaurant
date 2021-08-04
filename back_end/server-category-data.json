@@ -4,14 +4,14 @@
     "image_tag": "f3fbf57b118fa9",
     "name": "Bakery"
   },
-{
+  {
     "id": 2,
     "image_tag": "b271afbefdc554",
     "name": "Entrees"
   },
-{
-  "id": 3,
-  "image_tag": "eba73b2361fae3",
-  "name": "Drinks"
+  {
+    "id": 3,
+    "image_tag": "eba73b2361fae3",
+    "name": "Drinks"
   }
 ]
