@@ -18,7 +18,7 @@ module.exports = (app) => {
       orders.push(new_order)
       fs.writeFile(ORDER_DATA_FILE, JSON.stringify(orders,null,4),() => {
         res.setHeader('Cache-Control', 'no-cache');
-        res.status(200)
+        res.sendStatus(200)
       });
     });
   });

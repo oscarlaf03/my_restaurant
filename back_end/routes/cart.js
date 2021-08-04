@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const CART_DATA_FILE = path.join(__dirname, '../server-cart-data.json');
 
-
 module.exports = (app) => {
 
   app.get('/cart', (req, res) => {
@@ -24,15 +23,17 @@ module.exports = (app) => {
         price: req.body.price,
         quantity: 1
       };
-      // TODO smell??
-      let cartProductExists = false;
-      cartProducts.map((cartProduct) => {
-        if (cartProduct.id === newCartProduct.id) {
-          cartProduct.quantity++;
-          cartProductExists = true;
-        }
-      });
-      if (!cartProductExists) cartProducts.push(newCartProduct);
+
+      const match = cartProducts.find((cartProduct) => {
+        return cartProduct.id === newCartProduct.id;
+      })
+
+      if (match) {
+        match.quantity ++
+      } else{
+        cartProducts.push(newCartProduct);
+      }
+
       fs.writeFile(CART_DATA_FILE, JSON.stringify(cartProducts, null, 4), () => {
         res.setHeader('Cache-Control', 'no-cache');
         res.json(cartProducts);

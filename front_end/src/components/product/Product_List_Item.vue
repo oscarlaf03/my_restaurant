@@ -8,10 +8,6 @@
   <div class="card-content">
     <div class="content">
       <h4>{{ productItem.name }}</h4>
-      <!-- TODO add description -->
-      <!-- <p class="mt-4">
-        {{ productItem.description }}
-      </p> -->
     </div>
       <footer class='card-footer'>
         <p class='card-footer-item'>

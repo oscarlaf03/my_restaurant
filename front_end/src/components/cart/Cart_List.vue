@@ -11,7 +11,6 @@
           <CartListItem :cartItem="cartItem"/>
       </li>
       <div class="notification is-success">
-        <button class="delete"></button>
         <p>
           Total Quantity:
           <span class="has-text-weight-bold">{{ cartQuantity }}</span>
