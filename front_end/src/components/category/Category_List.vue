@@ -1,11 +1,12 @@
 <template> 
-  <div class="container">
-    <h1>about to render my available categories </h1>
-    {{selected_categories}}
-    <div class='field' v-for='category in available_categories' :key='category.id'>
+<div class="box">
+  <h1 class='is-size-3'>Chose your menu items</h1>
+  <div class="is-flex">
+    <div class='field is-flex-direction-row' v-for='category in available_categories' :key='category.id'>
       <CategoryListItem :category='category' />
     </div>
   </div>
+</div>
 
 </template>
 
