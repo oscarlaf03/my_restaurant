@@ -1,26 +1,8 @@
-import axios from 'axios';
 
-const state = {
-  orders: [],
-};
-
-const mutations = {
-  UPDATE_ORDERS(state, payload) {
-    state.orders = payload;
-  },
-};
-
-const actions = {
-  getOrders({ commit }) {
-    axios.get('/api/orders').then((response) => {
-      commit('UPDATE_ORDERS', response.data);
-    });
-  },
-};
-
-const getters = {
-  orders: (state) => state.orders,
-};
+import mutations from './mutations';
+import state from './state';
+import actions from './actions';
+import getters from './getters';
 
 const orderModule = {
   state,
