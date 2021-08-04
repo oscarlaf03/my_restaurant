@@ -24,15 +24,27 @@ module.exports = (app) => {
         price: req.body.price,
         quantity: 1
       };
-      // TODO smell??
-      let cartProductExists = false;
-      cartProducts.map((cartProduct) => {
-        if (cartProduct.id === newCartProduct.id) {
-          cartProduct.quantity++;
-          cartProductExists = true;
-        }
-      });
-      if (!cartProductExists) cartProducts.push(newCartProduct);
+      // TODO smell??  FIXED
+      // let cartProductExists = false;
+      // cartProducts.forEach((cartProduct) => {
+      //   if (cartProduct.id === newCartProduct.id) {
+      //     cartProduct.quantity++;
+      //     cartProductExists = true;
+      //   }
+      // });
+
+      const match = cartProducts.find((cartProduct) => {
+        return cartProduct.id === newCartProduct.id;
+      })
+
+      if (match) {
+        match.quantity ++
+        // cartProductExists = true;
+      } else{
+        cartProducts.push(newCartProduct);
+      }
+
+      // if (!cartProductExists) cartProducts.push(newCartProduct);
       fs.writeFile(CART_DATA_FILE, JSON.stringify(cartProducts, null, 4), () => {
         res.setHeader('Cache-Control', 'no-cache');
         res.json(cartProducts);

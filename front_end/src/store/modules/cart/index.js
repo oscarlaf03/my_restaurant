@@ -1,14 +1,10 @@
 import axios from 'axios';
+import mutations from './mutations';
 
 const state = {
   cartItems: [],
 };
 
-const mutations = {
-  UPDATE_CART_ITEMS(state, payload) {
-    state.cartItems = payload;
-  },
-};
 
 const actions = {
   getCartItems({ commit }) {
@@ -33,13 +29,20 @@ const actions = {
   },
 
   submitCart({ commit, dispatch }, cartContent) {
+    console.log('logging before axios submitCart', cartContent);
+
     axios.post('/api/orders', cartContent).then((response) => {
+      console.log('logging from submitCart');
       console.log(commit, response, dispatch);
+
       if (response.status === 200) {
         dispatch('removeAllCartItems');
       } else {
-        // TODO handle this
+        // TODO handle this make notification
+        // console.error('my error at submit cart', 
       }
+    }).catch(error => {
+      console.log('error', error);
     });
   },
 };

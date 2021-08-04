@@ -9,5 +9,6 @@ export default createStore({
     product,
     cart,
     order,
-  },
+    category
+    },
 });

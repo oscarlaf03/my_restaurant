@@ -1,6 +1,7 @@
 <template> 
   <div class="container">
-    {{available_categories}}
+    <h1>about to render my available categories </h1>
+    {{selected_categories}}
     <div class='field' v-for='category in available_categories' :key='category.id'>
       <CategoryListItem :category='category' />
     </div>
@@ -18,7 +19,7 @@ export default {
     CategoryListItem
   },
   computed: {
-    ...mapGetters(['available_categories'])
+    ...mapGetters(['available_categories', 'selected_categories'])
   },
   created(){
     this.$store.dispatch('getCategories')

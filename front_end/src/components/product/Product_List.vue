@@ -17,7 +17,7 @@ export default {
   components: {
     ProductListItem: Product_List_Item,
     CategoryList: Category_List
-  },
+  },  
   computed: {
     ...mapGetters([
       'productItems',
