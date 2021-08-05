@@ -1,10 +1,18 @@
 # My Restaurant Menu App
-This an example of a Vue application using Vuex library to manager the store of the applications.
-It is connected to an expres JS backend. 
+This is an example of a Vue application using Vuex library to manage the store of the application.
+It is connected to an express JS backend. 
 It mocks a database by reading and writing into json files.
 
+### Key features
+  - Users can filter menu itema by the menu category of their choosing
+  - Users can add menu items to their "Cart" from the root page
+  - Users can follow the link in the navbar to the Order submission page and have one last chance to make any final modification to their order before entering their payment info and submitting the order **the payment info field can be any string**
+  - Users get interactive notification along their order journey whenver they add or remove items to their cart
+  - Users can empty their cart without sumbitting it and start overr again
+  - Submitted orders get saved on the back-end and are listed on the orders page
+
 ## How to run?
-Back-end and Front-end are "independent" projects but they are paired together in this repo, after cloning this repo into yout local machine start them up simulatenoysly on different terminals
+Back-end and Front-end are "independent" projects but they are paired together in this repo, after cloning this repo into yout local machine start them up simultanously on different terminals
 
 ### Run the back-end
 
@@ -12,11 +20,11 @@ Back-end and Front-end are "independent" projects but they are paired together i
 ```
 $ cd back_end
 ```
-  - Once there install the dependencies on package.json use npm or yarn, up to you
+  - Once there install the dependencies on `package.json` use npm or yarn, up to you
 ```
 $ npm install
 ```
-  - Now start up the server, it is config to run on `localhost:3000`
+  - Now start up the server, it is configured to run on `localhost:3000`
 ```
 $ npm start
 ```
