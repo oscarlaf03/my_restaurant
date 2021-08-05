@@ -8,15 +8,15 @@
 </template>
 
 <script>
-import ProductList from '../product/Product_List.vue'
-import CategoryList from '../category/Category_List.vue'
+import ProductList from '../product/Product_List.vue';
+import CategoryList from '../category/Category_List.vue';
 
 export default {
   name: 'Menu',
-  components:{
+  components: {
     ProductList,
-    CategoryList
-  }
+    CategoryList,
+  },
 
-}
+};
 </script>

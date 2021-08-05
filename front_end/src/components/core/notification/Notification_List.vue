@@ -1,26 +1,25 @@
 <template>
-  <div class="notification-list"> 
+  <div class="notification-list">
     <NotificationMessage v-for='notification in notifications' :key='notification.id' :notification='notification' />
   </div>
 </template>
 
 <script>
-  import NotificationMessage from './Notification_Message.vue'
+import { mapGetters } from 'vuex';
+import NotificationMessage from './Notification_Message.vue';
 
-  import { mapGetters} from 'vuex';
-  export default {
-    name: 'NotificationList',
-    components: {
-      NotificationMessage
-    },
-    computed: {
-      ...mapGetters(['notifications'])
-    }
+export default {
+  name: 'NotificationList',
+  components: {
+    NotificationMessage,
+  },
+  computed: {
+    ...mapGetters(['notifications']),
+  },
 
-  }
+};
 
 </script>
-
 
 <style scoped>
 

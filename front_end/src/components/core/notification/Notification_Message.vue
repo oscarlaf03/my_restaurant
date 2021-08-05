@@ -6,32 +6,30 @@
 
 <script>
 
-import {mapActions} from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
   props: ['notification'],
-  computed:{
-    notificationType(){
-      return `is-${this.notification.type || 'primary'}`
-    }
+  computed: {
+    notificationType() {
+      return `is-${this.notification.type || 'primary'}`;
+    },
   },
-  data(){
+  data() {
     return {
-      timeout: null
-    }
+      timeout: null,
+    };
   },
   created() {
     const notificationDuration = this.notification.milliseconds || 1300;
-    this.timeout = setTimeout(()=>{
+    this.timeout = setTimeout(() => {
       this.removeNotification(this.notification);
-    },notificationDuration);
-
+    }, notificationDuration);
   },
-  beforeDestroy(){
+  beforeUnmount() {
     clearTimeout(this.timeout);
-
   },
-  methods:  mapActions(['removeNotification'])
+  methods: mapActions(['removeNotification']),
 
 };
 </script>

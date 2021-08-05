@@ -1,5 +1,5 @@
 const state = {
-  notifications: []
-}
+  notifications: [],
+};
 
 export default state;

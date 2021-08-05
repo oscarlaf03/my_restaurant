@@ -1,11 +1,12 @@
 <template>
   <div class="box m-2 p-3">
-    <div class="order-item__details">
-      <p>order id:{{order.id}}</p>
-      <p>payment_info: {{order.payment_info}}</p>
+    <div class="content">
+      <p>order id: {{order.id}}</p>
+      <p>payment information: {{order.payment_info}}</p>
       <p>total amount: {{order.total}}</p>
-      <ul class='order-item' v-for='item in order.items' :key='item.id'>
-        <li>name: {{item.title}} price: {{item.price}} quantity: {{item.quantity}}</li>
+      <p>order items:</p>
+      <ul v-for='item in order.items' :key='item.id'>
+        <li>name: {{item.name}}, price: {{item.price}}, quantity: {{item.quantity}}</li>
       </ul>
     </div>
   </div>

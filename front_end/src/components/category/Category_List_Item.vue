@@ -6,10 +6,11 @@
 </template>
 
 <script>
-  import {mapActions} from 'vuex';
-  export default {
-    name: 'CategoryListItem',
-    props:['category'],
-    methods:{...mapActions(['toggleCategory'])}
-  }
+import { mapActions } from 'vuex';
+
+export default {
+  name: 'CategoryListItem',
+  props: ['category'],
+  methods: { ...mapActions(['toggleCategory']) },
+};
 </script>

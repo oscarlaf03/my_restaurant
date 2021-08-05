@@ -13,13 +13,13 @@
 </template>
 <script>
 import Navbar from './components/core/Navbar';
-import NotificationList from './components/core/notification/Notification_List.vue'
+import NotificationList from './components/core/notification/Notification_List.vue';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    NotificationList
+    NotificationList,
   },
 };
 </script>

@@ -11,19 +11,19 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import { mapGetters } from 'vuex';
 import CategoryListItem from './Category_List_Item.vue';
 
 export default {
   name: 'CategoryList',
   components: {
-    CategoryListItem
+    CategoryListItem,
   },
   computed: {
-    ...mapGetters(['available_categories', 'selected_categories'])
+    ...mapGetters(['available_categories', 'selected_categories']),
   },
-  created(){
-    this.$store.dispatch('getCategories')
-  }
-}
+  created() {
+    this.$store.dispatch('getCategories');
+  },
+};
 </script>

@@ -1,16 +1,14 @@
 const mutations = {
   PUSH_NOTIFICATION(state, notification) {
-    const randomUniqueId= (Math.random().toString(36) + Date.now().toString(36)).substr(2);
+    const randomUniqueId = (Math.random().toString(36) + Date.now().toString(36)).substr(2);
     state.notifications.push({
       ...notification,
-      id: randomUniqueId
+      id: randomUniqueId,
     });
   },
-  REMOVE_NOTIFICATION(state, notification){
-    state.notifications = state.notifications.filter( n =>{
-      return n.id != notification.id
-    });
-  }
+  REMOVE_NOTIFICATION(state, notification) {
+    state.notifications = state.notifications.filter((n) => n.id != notification.id);
+  },
 
 };
 

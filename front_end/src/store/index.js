@@ -11,6 +11,6 @@ export default createStore({
     cart,
     order,
     category,
-    notification
-    },
+    notification,
+  },
 });

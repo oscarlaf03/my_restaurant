@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "id": 1,
+        "items": [
+            {
+                "id": 1,
+                "category_id": 1,
+                "image_tag": "293202f9d9f7f4",
+                "name": "Bagel",
+                "price": 2,
+                "quantity": 10
+            }
+        ],
+        "total": "20.00",
+        "payment_info": "my very first order"
+    }
+]

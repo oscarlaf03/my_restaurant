@@ -5,7 +5,7 @@ const actions = {
   getProductItems({ commit, dispatch }) {
     axios.get('/api/products').then((response) => {
       commit('UPDATE_PRODUCT_ITEMS', response.data);
-    }).catch(err => {
+    }).catch((err) => {
       console.error(err);
       dispatchNotification.apiError(dispatch);
     });

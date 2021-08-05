@@ -8,15 +8,14 @@
 <script>
 import { mapGetters } from 'vuex';
 import Product_List_Item from './Product_List_Item';
-import Category_List from '../category/Category_List.vue'
-
+import Category_List from '../category/Category_List.vue';
 
 export default {
   name: 'ProductList',
   components: {
     ProductListItem: Product_List_Item,
-    CategoryList: Category_List
-  },  
+    CategoryList: Category_List,
+  },
   computed: {
     ...mapGetters([
       'productItems',
