@@ -1,18 +1,1 @@
-[
-    {
-        "id": 10,
-        "category_id": 3,
-        "image_tag": "dba0fc03da30ca",
-        "name": "Medium Drink",
-        "price": 1.5,
-        "quantity": 9
-    },
-    {
-        "id": 1,
-        "category_id": 1,
-        "image_tag": "293202f9d9f7f4",
-        "name": "Bagel",
-        "price": 2,
-        "quantity": 2
-    }
-]
+[]

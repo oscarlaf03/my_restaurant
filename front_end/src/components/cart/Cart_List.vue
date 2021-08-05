@@ -23,7 +23,7 @@
       <div class="field">
         <label class="label">Payment Info</label>
         <div class="control">
-          <input class="input" type="text" placeholder="C/C info" v-model="payment_info">
+          <input class="input" type="text" placeholder="Type anything to continue" v-model="payment_info">
         </div>
       </div>
 

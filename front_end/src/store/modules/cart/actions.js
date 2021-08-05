@@ -1,38 +1,60 @@
 import axios from 'axios';
+import dispatchNotification from '../../utils/notifications';
 
 const actions = {
-  getCartItems({ commit }) {
+  getCartItems({ commit, dispatch }) {
     axios.get('/api/cart').then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
+    }).catch( err => {
+      console.error(err);
+      dispatchNotification.serverError(dispatch);
     });
   },
-  addCartItem({ commit }, cartItem) {
+  addCartItem({ commit, dispatch }, cartItem) {
     axios.post('/api/cart', cartItem).then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
+      dispatch('addNotification',{message: `${cartItem.name} added to cart`}, {root: true});
+    }).catch( err => {
+      console.error(err);
+      dispatchNotification.serverError(dispatch);
     });
   },
-  removeCartItem({ commit }, cartItem) {
+  removeCartItem({ commit, dispatch }, cartItem) {
     axios.delete('/api/cart/delete/', { data: cartItem }).then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
+      dispatch('addNotification',
+        {message: `${cartItem.name} removed  from cart`, type:'info'},
+        {root: true}
+      );
+    }).catch( err => {
+      console.error(err);
+      dispatchNotification.serverError(dispatch);
     });
   },
   removeAllCartItems({ commit }) {
     axios.delete('/api/cart/delete/all').then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
-    });
+    }).catch( err => {
+      console.error(err);
+      dispatchNotification.serverError(dispatch);
+    });;
   },
 
-  submitCart({ commit, dispatch }, cartContent) {
+  submitCart({ dispatch }, cartContent) {
     axios.post('/api/orders', cartContent).then((response) => {
 
       if (response.status === 200) {
         dispatch('removeAllCartItems');
+        dispatch('addNotification',
+        {message: 'Order confirmed successfully', type:'success', milliseconds: 3000},
+        {root: true}
+      );
       } else {
-        // TODO handle this make notification
-        // console.error('my error at submit cart', 
+        dispatchNotification.apiError(dispatch);
       }
-    }).catch(error => {
-      console.log('error', error);
+    }).catch(err => {
+      console.error( err);
+      dispatchNotification.serverError(dispatch);
     });
   },
 };
