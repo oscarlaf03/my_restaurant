@@ -1,7 +1,6 @@
 <template>
   <div class="notification-list"> 
     <NotificationMessage v-for='notification in notifications' :key='notification.id' :notification='notification' />
-
   </div>
 </template>
 
@@ -21,7 +20,6 @@
   }
 
 </script>
-
 
 
 <style scoped>

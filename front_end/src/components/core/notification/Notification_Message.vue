@@ -1,8 +1,5 @@
 <template>
-  <div class="notification is-info">
-    <!-- <button type='button' class='close' data-dismiss='alert' aria-label="Close"> -->
-      <span aria-hidden="true">&times;</span>
-    <!-- </button> -->
+  <div :class="notificationType" class='notification'>
     {{notification.message}}
   </div>
 </template>
@@ -13,15 +10,21 @@ import {mapActions} from 'vuex';
 
 export default {
   props: ['notification'],
+  computed:{
+    notificationType(){
+      return `is-${this.notification.type || 'primary'}`
+    }
+  },
   data(){
     return {
       timeout: null
     }
   },
   created() {
+    const notificationDuration = this.notification.milliseconds || 1300;
     this.timeout = setTimeout(()=>{
       this.removeNotification(this.notification);
-    },1500);
+    },notificationDuration);
 
   },
   beforeDestroy(){
