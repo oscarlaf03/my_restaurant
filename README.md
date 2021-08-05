@@ -4,11 +4,11 @@ It is connected to an express JS backend.
 It mocks a database by reading and writing into json files.
 
 ### Key features
-  - Users can filter menu itema by the menu category of their choosing
+  - Users can filter menu items according the menu category of their choosing
   - Users can add menu items to their "Cart" from the root page
   - Users can follow the link in the navbar to the Order submission page and have one last chance to make any final modification to their order before entering their payment info and submitting the order **the payment info field can be any string**
-  - Users get interactive notification along their order journey whenver they add or remove items to their cart
-  - Users can empty their cart without sumbitting it and start overr again
+  - Users get interactive notifications along their order journey whenever they add or remove items to their cart
+  - Users can empty their cart without sumbitting to start over again
   - Submitted orders get saved on the back-end and are listed on the orders page
 
 ## How to run?
@@ -56,5 +56,4 @@ $ npm run serve
 
 #### Requirements
 
-  - node
-  - vue-cli
+  - node v14.15.0
