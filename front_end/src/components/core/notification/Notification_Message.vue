@@ -1,6 +1,6 @@
 <template>
-  <div :class="notificationType" class='notification'>
-    {{notification.message}}
+  <div :class="notificationType" class='notification has-text-centered'>
+    <span class='is-size-5 '>{{notification.message}}</span>
   </div>
 </template>
 

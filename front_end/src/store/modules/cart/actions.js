@@ -13,7 +13,7 @@ const actions = {
   addCartItem({ commit, dispatch }, cartItem) {
     axios.post('/api/cart', cartItem).then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
-      dispatch('addNotification',{message: `${cartItem.name} successfully added to cart`}, {root: true});
+      dispatch('addNotification',{message: `${cartItem.name} added to cart`}, {root: true});
     }).catch( err => {
       console.error(err);
       dispatchNotification.serverError(dispatch);
@@ -23,7 +23,7 @@ const actions = {
     axios.delete('/api/cart/delete/', { data: cartItem }).then((response) => {
       commit('UPDATE_CART_ITEMS', response.data);
       dispatch('addNotification',
-        {message: `${cartItem.name} successfully removed  from cart`, type:'info'},
+        {message: `${cartItem.name} removed  from cart`, type:'info'},
         {root: true}
       );
     }).catch( err => {

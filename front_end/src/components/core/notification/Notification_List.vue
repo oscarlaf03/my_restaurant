@@ -29,7 +29,7 @@
     bottom: 0;
     right: 0;
     margin-right: 15px;
-    width: 320px;
+    width: 380px;
   }
 
 </style>
