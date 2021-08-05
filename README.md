@@ -52,7 +52,7 @@ $ npm run serve
   - Local:   http://localhost:8080/ 
 ```
 
-** Now we are ready to take your order at  http://localhost:8080/  **
+### Now we are ready to take your order at  http://localhost:8080/ 
 
 #### Requirements
 
