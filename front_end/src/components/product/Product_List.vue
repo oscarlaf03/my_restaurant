@@ -1,6 +1,5 @@
 <template>
   <div class="columns is-mobile is-multiline is-centered ">
-    <CategoryList/>
     <div class="column is-one-quarter" v-for="productItem in productItems" :key="productItem.id">
     <ProductListItem :productItem="productItem"/>
     </div>

@@ -1,8 +1,8 @@
-<template> 
-<div class="box">
+<template>
+<div class="box  has-text-centered">
   <h1 class='is-size-3'>Chose your menu items</h1>
-  <div class="is-flex">
-    <div class='field is-flex-direction-row' v-for='category in available_categories' :key='category.id'>
+  <div class="is-flex is-justify-content-center">
+    <div class='' v-for='category in available_categories' :key='category.id'>
       <CategoryListItem :category='category' />
     </div>
   </div>

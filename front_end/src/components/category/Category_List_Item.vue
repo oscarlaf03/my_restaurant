@@ -1,5 +1,5 @@
 <template>
-  <label class="checkbox m-2 p-1">
+  <label class="checkbox m-2 p-1  ">
     <input type="checkbox" @click='toggleCategory(category.id)'>
     {{category.name}}
   </label>

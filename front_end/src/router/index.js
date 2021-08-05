@@ -1,12 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import CartList from '../components/cart/Cart_List.vue';
-import ProductList from '../components/product/Product_List.vue';
 import OrderList from '../components/order/Order_List.vue';
+import Menu from '../components/core/Menu.vue'
 
 const routes = [
   {
     path: '/menu',
-    component: ProductList,
+    component: Menu,
   },
   {
     path: '/cart',
